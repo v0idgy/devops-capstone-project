@@ -69,7 +69,6 @@ def list_accounts():
     This endpoint will list all Accounts
     """
     app.logger.info("Request to list Accounts")
-
     accounts = Account.all()
     account_list = [account.serialize() for account in accounts]
     app.logger.info("Returning [%s] accounts", len(account_list))
